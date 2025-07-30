@@ -78,7 +78,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: https://github.com/gabrielvpbarbosa/kube-news.git
+        url: ./template
         values:
           name: ${{ parameters.AppName }}
           secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
