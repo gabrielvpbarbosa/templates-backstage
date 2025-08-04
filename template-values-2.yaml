@@ -117,10 +117,12 @@ spec:
           title: databaseEnabled
           type: boolean
           default: false
+          ui:widget: radio
         envFileEnabled:
           title: envFileEnabled
           type: boolean
           default: false
+          ui:widget: radio
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
