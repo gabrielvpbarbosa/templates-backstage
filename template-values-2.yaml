@@ -12,17 +12,6 @@ spec:
   # These parameters are used to generate the input form in the frontend, and are
   # used to gather input data for the execution of the template.
   parameters:
-    - title: Fill in some steps
-      required:
-        - name
-      properties:
-        name:
-          title: Name
-          type: string
-          description: Unique name of the component
-          ui:autofocus: true
-          ui:options:
-            rows: 5
     - title: Choose a location
       required:
         - repoUrl
@@ -34,34 +23,8 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-    - title: Select Resources AWS
-      properties:
-        appname:
-          title: AppName
-          type: string
-          description: Nome do repositório da aplicação
-          ui:autofocus: true
-          ui:options:
-            rows: 1
-        ambiente:
-          title: Ambiente
-          type: array
-          items:
-            type: string
-            enum:
-              - development
-              - homologation
-          uniqueItems: true
-        region:
-          title: Regiao
-          type: array
-          items:
-            type: string
-            enum:
-              - sa-east-1
-              - us-east-1
-          uniqueItems: true
-            
+    - title: Select Resources AWS/Crosplanne
+      properties:          
         secretsManagerEnabled:
           title: Secrets Manager
           type: boolean
@@ -85,6 +48,9 @@ spec:
         snsEnabled:
           title: snsEnabled
           type: boolean
+          default: false
+    - title: Select Resources Kubernetes
+      properties:
         deploymentEnabled:
           title: deploymentEnabled
           type: boolean
@@ -117,12 +83,10 @@ spec:
           title: databaseEnabled
           type: boolean
           default: false
-          ui:widget: radio
         envFileEnabled:
           title: envFileEnabled
           type: boolean
           default: false
-          ui:widget: radio
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
