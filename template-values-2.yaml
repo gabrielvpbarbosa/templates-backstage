@@ -65,10 +65,77 @@ spec:
         secretsManagerEnabled:
           title: Secrets Manager
           type: boolean
+          default: false
           ui:widget: radio
         s3Enabled:
           title: S3
           type: boolean
+          default: false
+          ui:widget: radio
+        sesEnabled:
+          title: sesEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        dynamoDbEnabled:
+          title: dynamoDbEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        sqsEnabled:
+          title: sqsEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        snsEnabled:
+          title: snsEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        deploymentEnabled:
+          title: deploymentEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        serviceEnabled:
+          title: serviceEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        ingressEnabled:
+          title: ingressEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        configMapEnabled:
+          title: configMapEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        autoscalingEnabled:
+          title: autoscalingEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        roleK8sEnabled:
+          title: roleK8sEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        redisStandaloneEnabled:
+          title: redisStandaloneEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        databaseEnabled:
+          title: databaseEnabled
+          type: boolean
+          default: false
+          ui:widget: radio
+        envFileEnabled:
+          title: envFileEnabled
+          type: boolean
+          default: false
           ui:widget: radio
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -81,8 +148,23 @@ spec:
         url: ./template
         values:
           name: ${{ parameters.AppName }}
-          secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
-          s3Enabled: ${{ parameters.s3Enabled }}
+          secretsManagerEnabled: {{ parameters.secretsManagerEnabled }}
+          s3Enabled: {{ parameters.s3Enabled }} 
+          sesEnabled: {{ parameters.sesEnabled }} 
+          dynamoDbEnabled: {{ parameters.dynamoDbEnabled }} 
+          sqsEnabled: {{ parameters.sqsEnabled }} 
+          snsEnabled: {{ parameters.snsEnabled }} 
+
+          ### KUBERNETES ###
+          deploymentEnabled: {{ parameters.deploymentEnabled }} 
+          serviceEnabled: {{ parameters.serviceEnabled }} 
+          ingressEnabled: {{ parameters.ingressEnabled }} 
+          configMapEnabled: {{ parameters.configMapEnabled }} 
+          autoscalingEnabled: {{ parameters.autoscalingEnabled }} 
+          roleK8sEnabled: {{ parameters.roleK8sEnabled }} 
+          redisStandaloneEnabled: {{ parameters.redisStandaloneEnabled }} 
+          databaseEnabled: {{ parameters.databaseEnabled }} 
+          envFileEnabled: {{ parameters.envFileEnabled }} 
 
     # This step publishes the contents of the working directory to GitHub.
     # If you or your organization prefer another default branch name over 'main'

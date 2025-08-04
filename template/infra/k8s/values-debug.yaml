@@ -1,0 +1,17 @@
+secretsManagerEnabled: {{ values.secretsManagerEnabled }}
+s3Enabled: {{ values.s3Enabled }} 
+sesEnabled: {{ values.sesEnabled }} 
+dynamoDbEnabled: {{ values.dynamoDbEnabled }} 
+sqsEnabled: {{ values.sqsEnabled }} 
+snsEnabled: {{ values.snsEnabled }} 
+
+### KUBERNETES ###
+deploymentEnabled: {{ values.deploymentEnabled }} 
+serviceEnabled: {{ values.serviceEnabled }} 
+ingressEnabled: {{ values.ingressEnabled }} 
+configMapEnabled: {{ values.configMapEnabled }} 
+autoscalingEnabled: {{ values.autoscalingEnabled }} 
+roleK8sEnabled: {{ values.roleK8sEnabled }} 
+redisStandaloneEnabled: {{ values.redisStandaloneEnabled }} 
+databaseEnabled: {{ values.databaseEnabled }} 
+envFileEnabled: {{ values.envFileEnabled }} 
