@@ -23,6 +23,8 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+            allowedOwners:
+              - gabrielvpbarbosa
     - title: Select Resources AWS/Crosplanne
       properties:          
         secretsManagerEnabled:
