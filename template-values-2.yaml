@@ -65,64 +65,49 @@ spec:
         secretsManagerEnabled:
           title: Secrets Manager
           type: boolean
-          default: false
         s3Enabled:
           title: S3
           type: boolean
-          default: false
         sesEnabled:
           title: sesEnabled
           type: boolean
-          default: false
         dynamoDbEnabled:
           title: dynamoDbEnabled
           type: boolean
-          default: false
         sqsEnabled:
           title: sqsEnabled
           type: boolean
-          default: false
         snsEnabled:
           title: snsEnabled
           type: boolean
-          default: false
         deploymentEnabled:
           title: deploymentEnabled
           type: boolean
-          default: false
         serviceEnabled:
           title: serviceEnabled
           type: boolean
-          default: false
         ingressEnabled:
           title: ingressEnabled
           type: boolean
-          default: false
         configMapEnabled:
           title: configMapEnabled
           type: boolean
-          default: false
         autoscalingEnabled:
           title: autoscalingEnabled
           type: boolean
-          default: false
         roleK8sEnabled:
           title: roleK8sEnabled
           type: boolean
-          default: false
         redisStandaloneEnabled:
           title: redisStandaloneEnabled
           type: boolean
-          default: false
         databaseEnabled:
           title: databaseEnabled
           type: boolean
-          default: false
           ui:widget: radio
         envFileEnabled:
           title: envFileEnabled
           type: boolean
-          default: false
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
