@@ -118,24 +118,24 @@ spec:
       input:
         url: ./template
         values:
-          name: ${{ parameters.AppName }}
-          secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
-          s3Enabled: ${{ parameters.s3Enabled }} 
-          sesEnabled: ${{ parameters.sesEnabled }} 
-          dynamoDbEnabled: ${{ parameters.dynamoDbEnabled }} 
-          sqsEnabled: ${{ parameters.sqsEnabled }} 
-          snsEnabled: ${{ parameters.snsEnabled }} 
+          name: ${{parameters.AppName}}
+          secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
+          s3Enabled: ${{parameters.s3Enabled}} 
+          sesEnabled: ${{parameters.sesEnabled}} 
+          dynamoDbEnabled: ${{parameters.dynamoDbEnabled}} 
+          sqsEnabled: ${{parameters.sqsEnabled}} 
+          snsEnabled: ${{parameters.snsEnabled}} 
 
           ### KUBERNETES ###
-          deploymentEnabled: ${{ parameters.deploymentEnabled }} 
-          serviceEnabled: ${{ parameters.serviceEnabled }} 
-          ingressEnabled: ${{ parameters.ingressEnabled }} 
-          configMapEnabled: ${{ parameters.configMapEnabled }} 
-          autoscalingEnabled: ${{ parameters.autoscalingEnabled }} 
-          roleK8sEnabled: ${{ parameters.roleK8sEnabled }} 
-          redisStandaloneEnabled: ${{ parameters.redisStandaloneEnabled }} 
-          databaseEnabled: ${{ parameters.databaseEnabled }} 
-          envFileEnabled: ${{ parameters.envFileEnabled }} 
+          deploymentEnabled: ${{parameters.deploymentEnabled}} 
+          serviceEnabled: ${{parameters.serviceEnabled}} 
+          ingressEnabled: ${{parameters.ingressEnabled}} 
+          configMapEnabled: ${{parameters.configMapEnabled}} 
+          autoscalingEnabled: ${{parameters.autoscalingEnabled}} 
+          roleK8sEnabled: ${{parameters.roleK8sEnabled}} 
+          redisStandaloneEnabled: ${{parameters.redisStandaloneEnabled}} 
+          databaseEnabled: ${{parameters.databaseEnabled}} 
+          envFileEnabled: ${{parameters.envFileEnabled}} 
 
     # This step publishes the contents of the working directory to GitHub.
     # If you or your organization prefer another default branch name over 'main'
