@@ -65,7 +65,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: https://github.com/${{ parameters.Owners }}/${{ parameters.framework }}/${{ parameters.tag }}/
+        url: https://github.com/${{ parameters.repoUrl.Owners }}/${{ parameters.framework }}/${{ parameters.tag }}/
         values:
           name: ${{ parameters.AppName }}
           secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
