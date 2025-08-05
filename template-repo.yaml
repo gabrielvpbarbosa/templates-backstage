@@ -7,7 +7,7 @@ metadata:
   description: Template para criar repositorio e esqueleto de aplicação no git.
 spec:
   owner: user:guest
-  type: Service
+  type: service
 
   # These parameters are used to generate the input form in the frontend, and are
   # used to gather input data for the execution of the template.
