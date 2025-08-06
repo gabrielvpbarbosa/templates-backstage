@@ -55,7 +55,7 @@ spec:
           type: string
           description: A versão do framework
           enum:
-          - v1.0
+          - v12
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
