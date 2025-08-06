@@ -60,7 +60,7 @@ spec:
       input:
         url: https://github.com/gabrielvpbarbosa/${{ parameters.framework }}/tree/${{ parameters.tag }}
         values:
-          name: ${{ parameters.AppName }}
+          name: ${{ parameters.name }}
           secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
           s3Enabled: ${{ parameters.s3Enabled }}
 
