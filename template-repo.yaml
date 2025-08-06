@@ -40,15 +40,9 @@ spec:
           title: framework
           type: string
           enum:
-          - laravel
+          - laravel/v12
           - slim
           - 'null'
-        tag:
-          title: versao
-          type: string
-          description: A versão do framework
-          enum:
-          - v12
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -58,7 +52,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: https://github.com/gabrielvpbarbosa/${{ parameters.framework }}/tree/${{ parameters.tag }}
+        url: https://github.com/gabrielvpbarbosa/${{ parameters.framework.split("/")[0] }}/tree/${{ parameters.framework.split("/")[1] }}
         values:
           name: ${{ parameters.name }}
           secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
