@@ -53,7 +53,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: https://github.com/parameters.repoUrl.split("=")[1]/${{ parameters.framework.split("/")[0] }}/tree/${{ parameters.framework.split("/")[1] }}
+        url: https://github.com/${{ parameters.repoUrl.split("=")[1] }}/${{ parameters.framework.split("/")[0] }}/tree/${{ parameters.framework.split("/")[1] }}
         values:
           name: ${{ parameters.name }}
 
