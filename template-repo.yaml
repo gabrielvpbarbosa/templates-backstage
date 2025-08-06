@@ -43,7 +43,7 @@ spec:
           type: string
           enum:
           - laravel/v12
-          - slim
+          - slim/v1.5.0
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -56,8 +56,6 @@ spec:
         url: https://github.com/parameters.framework.split("=")[1]/${{ parameters.framework.split("/")[0] }}/tree/${{ parameters.framework.split("/")[1] }}
         values:
           name: ${{ parameters.name }}
-          secretsManagerEnabled: ${{ parameters.secretsManagerEnabled }}
-          s3Enabled: ${{ parameters.s3Enabled }}
 
     # This step publishes the contents of the working directory to GitHub.
     # If you or your organization prefer another default branch name over 'main'
