@@ -36,13 +36,6 @@ spec:
               - github.com
     - title: Informações do projeto
       properties:
-        appname:
-          title: AppName
-          type: string
-          description: Nome do repositório da aplicação
-          ui:autofocus: true
-          ui:options:
-            rows: 1
         framework:
           title: framework
           type: string
