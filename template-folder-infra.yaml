@@ -105,6 +105,7 @@ spec:
       action: fetch:template
       input:
         url: https://github.com/gabrielvpbarbosa/templates-backstage/tree/main/template-infra
+        targetPath: template-infra
         values:
           name: ${{parameters.AppName}}
           secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
