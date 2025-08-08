@@ -133,7 +133,7 @@ spec:
       action: publish:github
       input:
         description: This is ${{ parameters.name }}
-        repoUrl: https://github.com/gabrielvpbarbosa/repositorio-infra
+        repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
         defaultBranch: 'develop'
 
     # The final step is to register our new component in the catalog.
