@@ -135,7 +135,7 @@ spec:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
         branch: 'develop'
         commitMessage: "feat: adiciona estrutura base"
-        token: ${{ secrets.github_token }}
+        token: ${{ secrets.token }}
 
     # The final step is to register our new component in the catalog.
     - id: register
