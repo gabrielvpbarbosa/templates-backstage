@@ -134,6 +134,7 @@ spec:
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
         defaultBranch: 'develop'
+        commitMessage: "feat: adiciona estrutura base"
 
     # The final step is to register our new component in the catalog.
     - id: register
