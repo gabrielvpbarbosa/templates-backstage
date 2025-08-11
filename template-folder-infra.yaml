@@ -130,11 +130,12 @@ spec:
     # you can change that here.
     - id: push
       name: push
-      action: github:repo:push
+      action: custom:push:github
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
-        defaultBranch: 'develop'
+        branch: 'develop'
         commitMessage: "feat: adiciona estrutura base"
+        token: ${{ secrets.github_token }}
 
     # The final step is to register our new component in the catalog.
     - id: register
