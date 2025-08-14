@@ -136,7 +136,7 @@ spec:
         title: Create my new app
         description: This PR is really good
         commitMessage: Custom commit message
-        sourcePath: .
+        sourcePath: source
 
     # The final step is to register our new component in the catalog.
     - id: register
