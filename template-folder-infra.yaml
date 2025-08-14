@@ -137,8 +137,6 @@ spec:
         description: This PR is really good
         commitMessage: Custom commit message
         sourcePath: .
-        labels:
-          - automerge
 
     # The final step is to register our new component in the catalog.
     - id: register
