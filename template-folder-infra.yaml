@@ -106,7 +106,7 @@ spec:
       input:
         url: ./template-infra
         values:
-          name: ${{parameters.AppName}}
+          name: ${{parameters.appname}}
           secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
           s3Enabled: ${{parameters.s3Enabled}} 
           sesEnabled: ${{parameters.sesEnabled}} 
