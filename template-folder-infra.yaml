@@ -132,7 +132,8 @@ spec:
       name: Create a pull request
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
-        branchName: ${{parameters.AppName}}
+        branchName: teste
+        targetBranchName: develop
         title: Create my new app
         description: This PR is really good
         commitMessage: Custom commit message
