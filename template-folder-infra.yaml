@@ -104,7 +104,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./template
+        url: ./template-infra
         values:
           name: ${{parameters.AppName}}
           secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
@@ -132,7 +132,7 @@ spec:
       name: Create a pull request
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
-        branchName: teste2
+        branchName: teste3
         title: Create my new app
         description: This PR is really good
         commitMessage: Custom commit message
