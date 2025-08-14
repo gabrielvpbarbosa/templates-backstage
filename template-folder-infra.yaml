@@ -104,7 +104,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        targetPath: ./template-infra
+        url: ./template-infra
         values:
           name: ${{parameters.AppName}}
           secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
