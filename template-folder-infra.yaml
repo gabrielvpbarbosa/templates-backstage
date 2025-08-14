@@ -104,7 +104,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./template-infra
+        url: ./template
         values:
           name: ${{parameters.AppName}}
           secretsManagerEnabled: ${{parameters.secretsManagerEnabled}}
@@ -132,11 +132,10 @@ spec:
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
         branchName: teste
-        targetBranchName: develop
         title: Create my new app
         description: This PR is really good
         commitMessage: Custom commit message
-        sourcePath: source
+        sourcePath: .
 
     # The final step is to register our new component in the catalog.
     - id: register
