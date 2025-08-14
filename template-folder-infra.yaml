@@ -128,14 +128,14 @@ spec:
     # This step publishes the contents of the working directory to GitHub.
     # If you or your organization prefer another default branch name over 'main'
     # you can change that here.
-    - id: push
-      name: push
-      action: custom:push:github
+    - action: publish:github:pull-request
+      name: Create a pull request
       input:
         repoUrl: github.com?repo=repositorio-infra&owner=gabrielvpbarbosa
-        branch: 'develop'
-        commitMessage: "feat: adiciona estrutura base"
-        token: ${{ secrets.token }}
+        branchName: ${{parameters.AppName}}
+        title: Create my new app
+        description: This PR is really good
+        commitMessage: Custom commit message
 
     # The final step is to register our new component in the catalog.
     - id: register
