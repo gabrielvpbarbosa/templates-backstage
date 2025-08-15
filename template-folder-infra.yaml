@@ -143,7 +143,7 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: https://raw.githubusercontent.com/gabrielvpbarbosa/repositorio-infra/refs/heads/${{ parameters.name }}/${{ parameters.name }}
+        repoContentsUrl: https://github.com/gabrielvpbarbosa/repositorio-infra/${{ parameters.name }}/tree/${{ parameters.name }}
         catalogInfoPath: '/catalog-info.yaml'
         
   # Outputs are displayed to the user after a successful execution of the template.
